@@ -4,39 +4,69 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
   <title>BDC Bingo | BDC Production</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" >
   <meta property="og:type" content="website"> 
   <meta property="og:url" content="http://codeandpen.com/bingo"> 
   <meta property="og:title" content="Game of Thrones Party Time Bingo"> 
   <meta property="og:image" content="http://codeandpen.com/bingo/bingoflick.jpg"> 
   <meta property="og:description" content="The Business Development Center brings you quality bingo clicks. With such hits as the Business Ideator and the invention of the .gifs this will be a classic from day one.">
-  <link href='http://fonts.googleapis.com/css?family=Amatic+SC:700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="css/style.css">
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700|Roboto+Slab:400,700' rel='stylesheet' type='text/css'>  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div id="main_menu">
     <h1>Play Some<br/> Damn Bingo</h1>
+    <p class="footnote">G.O.T. Edition</p>
     <ul>
       <li id="reset_board">New Board</li>
       <li id="demo_show">Show Winning Moves</li>
     </ul>
   </div>
-  <ul id="box">
-  </ul>
+  <ul id="box"></ul>
+     <!--
   <div id="modal_background">
     <div id="modal_window">
     <div id="modal_header">
-      <h1>YOU HAVE WON!!!</h1>
+      <h1>Play Some Damn Bingo!</h1>
     </div>
     <div id="modal_body">
-     <h1>Play some more bingo!!</h1>
+		<div class="has_user_name">
+			<h1>Welcome back <span></span>. Let's play some damn bingo</h1>
+		</div>
+		<div class="user_name">
+   <div class="control"><label>Your Name:<span><span></label><input id="user_name" type="text"/></div>
+   </div>
+
+   <div class="topic"> 
+	    <div class="control">
+      <label>Your character's alignment:<span class="req">*</span></label>
+      <div class="custom_select">
+        <select id="alignment">
+          <option value="" selected>Make a decision</option>
+          <option value="got">Game of Thrones</option>
+          <option value="Benefactor">Neutral Good</option>
+          <option value="Rebel">Chaotic Good</option>
+          <option value="Judge">Lawful Neutral</option>
+          <option value="Boring Ass Person">Neutral</option>
+          <option value="Free Spirit">Chaotic Neutral</option>
+          <option value="Dominator">Lawful Evil</option>
+          <option value="Malefactor">Neutral Evil</option>
+          <option value="Destroyer">Chaotic Evil</option>
+        </select>
+      </div>
+
+      <p class="error_msg invalid_selection">Please make a selection.</p>
+    </div>   
+  </div>
+	
     </div>
     <div id="modal_footer">
-      <div id="win_btn" class="btn">Play Again</div>
+      <div id="win_btn" class="btn">Submit</div>
     </div>
   </div>
+          	   -->
 </div>
 <script src="js/library/jquery-1.9.1.min.js"></script> 
+<script src="js/jquery_easing.js"></script>
 <script src="js/cookie_monster.js"></script>
 <script src="js/main.js"></script>
 </body>

@@ -21,7 +21,7 @@ Cookie_Monster.prototype = {
       var cookie = doc_c[i];
       var is_there = cookie.indexOf("=");
       var cookie_value = cookie.substring(is_there+1);
-      var cookie_name = cookie.substring( 0,is_there);
+      var cookie_name = cookie.substring( 0,is_there).trim();
       cookies[cookie_name] = cookie_value;
     }
     return cookies
@@ -33,7 +33,7 @@ Cookie_Monster.prototype = {
       var cookie = browser_cookies[i];
       var index = cookie.indexOf("=");
       var cookie_value = cookie.substring(index+1);
-      var cookie_name = cookie.substring( 0,index);
+      var cookie_name = cookie.substring( 0,index).trim();
       if(cookie_name == name){
         var return_cookies ={};
         return_cookies[cookie_name] = cookie_value;
@@ -48,24 +48,22 @@ Cookie_Monster.prototype = {
       date.setFullYear(date.getFullYear() + 1);
     }
     var expires = exp || date;
-    document.cookie =name + '=' + value + ';' + 'expires=' + expires + ';'; 
+    document.cookie =name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=/'; 
 
   },
 
   delete_cookie:function(name){
     var expires = new Date();
     expires.setFullYear(expires.getFullYear() - 1);
-    document.cookie =name + '=;' + 'expires=' + expires + ';'; 
+    document.cookie = name + '=;' + 'expires=' + expires + ';' + 'path=/';
   },
 
   delete_cookies:function(){ 
     var cookies = this.get_cookies();
     var cm = this;
-    console.log(cookies);
     $.each(cookies, function(value, key){
        cm.delete_cookie(value.toString());
     });
   }
 
 }
-
